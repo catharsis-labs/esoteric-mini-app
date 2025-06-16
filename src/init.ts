@@ -10,8 +10,7 @@ import {
   type ThemeParams,
   themeParamsState,
   retrieveLaunchParams,
-  emitEvent,
-  miniApp,
+  emitEvent, mountMiniApp,
 } from '@telegram-apps/sdk-react';
 
 /**
@@ -62,13 +61,12 @@ export async function init(options: {
   // Mount all components used in the project.
   mountBackButton.ifAvailable();
   restoreInitData();
-  
-  if (miniApp.mountSync.isAvailable()) {
-    miniApp.mountSync();
-    bindThemeParamsCssVars();
-  }
-
-  mountViewport.isAvailable() && mountViewport().then(() => {
-    bindViewportCssVars();
-  });
+  await Promise.all([
+    mountMiniApp.isAvailable() && mountMiniApp().then(() => {
+      bindThemeParamsCssVars();
+    }),
+    mountViewport.isAvailable() && mountViewport().then(() => {
+      bindViewportCssVars();
+    }),
+  ]);
 }

@@ -5,7 +5,9 @@ import { InitDataPage } from '@/pages/InitDataPage.tsx';
 import { LaunchParamsPage } from '@/pages/LaunchParamsPage.tsx';
 import { ThemeParamsPage } from '@/pages/ThemeParamsPage.tsx';
 import { TONConnectPage } from '@/pages/TONConnectPage/TONConnectPage';
-
+import { UserPage } from "@/pages/UserPage/UserPage.tsx";
+import { BuyMenuPage } from "@/pages/BuyMenuPage/BuyMenuPage.tsx";
+import { Settings } from "@/pages/Settings.tsx";
 interface Route {
   path: string;
   Component: ComponentType;
@@ -41,4 +43,7 @@ export const routes: Route[] = [
       </svg>
     ),
   },
+  { path: '/user-page', Component: UserPage, title: 'User Page' },
+  { path: '/buy-menu', Component: BuyMenuPage, title: 'Buy Menu' },
+  { path: '/settings', Component: Settings, title: 'Settings' },
 ];

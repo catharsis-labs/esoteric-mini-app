@@ -5,6 +5,8 @@ import { AppRoot } from '@telegram-apps/telegram-ui';
 
 import { routes } from '@/navigation/routes.tsx';
 
+import { BottomNavigationBar } from "@/components/BottomNavigationBar.tsx";
+
 export function App() {
   const lp = useMemo(() => retrieveLaunchParams(), []);
   const isDark = useSignal(isMiniAppDark);
@@ -19,6 +21,7 @@ export function App() {
           {routes.map((route) => <Route key={route.path} {...route} />)}
           <Route path="*" element={<Navigate to="/"/>}/>
         </Routes>
+        <BottomNavigationBar />
       </HashRouter>
     </AppRoot>
   );

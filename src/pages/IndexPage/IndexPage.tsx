@@ -6,6 +6,9 @@ import { Page } from '@/components/Page.tsx';
 
 import tonSvg from './ton.svg';
 
+import { Button } from "@/components/ui/button"
+
+
 export const IndexPage: FC = () => {
   return (
     <Page back={false}>
@@ -14,6 +17,9 @@ export const IndexPage: FC = () => {
           header="Features"
           footer="You can use these pages to learn more about features, provided by Telegram Mini Apps and other useful projects"
         >
+          <div className="flex flex-wrap items-center gap-2 md:flex-row">
+            <Button>Button</Button>
+          </div>
           <Link to="/ton-connect">
             <Cell
               before={<Image src={tonSvg} style={{ backgroundColor: '#007AFF' }}/>}

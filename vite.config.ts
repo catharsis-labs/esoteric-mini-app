@@ -1,11 +1,13 @@
 import { defineConfig } from 'vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
+import path from "path"
+import tailwindcss from "@tailwindcss/vite"
 import react from '@vitejs/plugin-react-swc';
 import mkcert from 'vite-plugin-mkcert';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/reactjs-template/',
+  base: '/',
   css: {
     preprocessorOptions: {
       scss: {
@@ -14,6 +16,7 @@ export default defineConfig({
     },
   },
   plugins: [
+    tailwindcss(),
     // Allows using React dev server along with building a React application with Vite.
     // https://npmjs.com/package/@vitejs/plugin-react-swc
     react(),
@@ -25,6 +28,11 @@ export default defineConfig({
     // https://www.npmjs.com/package/vite-plugin-mkcert
     process.env.HTTPS && mkcert(),
   ],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
   build: {
     target: 'esnext',
   },
