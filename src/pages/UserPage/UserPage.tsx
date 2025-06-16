@@ -5,23 +5,8 @@ import { Separator } from "@/components/ui/separator"; // Assuming you have a Se
 import { Progress } from "@/components/ui/progress";
 import { useNavigate } from "react-router-dom"
 
-import {
-    initDataRaw as _initDataRaw,
-    initDataState as _initDataState,
-    LaunchParams,
-    type User,
-    useSignal,
-} from '@telegram-apps/sdk-react';
-import type {DisplayDataRow} from "@/components/DisplayData/DisplayData.tsx";
-
-function getUserRows(user: User): DisplayDataRow[] {
-    return Object.entries(user).map(([title, value]) => ({ title, value }));
-}
-
-const launchParams = LaunchParams;
-const telegramUser = initData?.user;
 const userData = {
-    name: telegramUser.first_name,
+    name: "Ivan",
     avatarUrl: "https://placehold.co/100x100/A0A0A0/FFFFFF?text=IV", // Placeholder image for avatar
     achievements: [
         { name: "Hierophant", progress: 80, icon: "🧘" }, // Using emojis as placeholders for icons
