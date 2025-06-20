@@ -21,8 +21,7 @@ export function InitUserInfo() {
             try {
                 const res = await fetch(`${apiUrl}/api/auth/verify`,  {
                     method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ initData: initDataRaw }),
+                    headers: { Authorization: `tma ${initDataRaw}` },
                 });
                 if (!res.ok) throw new Error(`Ошибка HTTP: ${res.status}`);
                 setStatus(res.status);
