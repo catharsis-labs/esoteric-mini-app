@@ -8,6 +8,8 @@ import { TONConnectPage } from '@/pages/TONConnectPage/TONConnectPage';
 import { UserPage } from "@/pages/UserPage/UserPage.tsx";
 import { BuyMenuPage } from "@/pages/BuyMenuPage/BuyMenuPage.tsx";
 import { Settings } from "@/pages/Settings.tsx";
+import { SpreadPage } from "@/pages/SpreadsPage/TestSpreadPage.tsx";
+import { InitUserInfo } from "@/pages/UserPage/InitUserInfo.tsx";
 interface Route {
   path: string;
   Component: ComponentType;
@@ -46,4 +48,6 @@ export const routes: Route[] = [
   { path: '/user-page', Component: UserPage, title: 'User Page' },
   { path: '/buy-menu', Component: BuyMenuPage, title: 'Buy Menu' },
   { path: '/settings', Component: Settings, title: 'Settings' },
+  { path: '/spreads', Component: SpreadPage, title: 'Spreads' },
+  { path: '/user-info', Component: InitUserInfo, title: 'InitUserInfo' },
 ];
