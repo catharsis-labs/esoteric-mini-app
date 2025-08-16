@@ -1,0 +1,10 @@
+.dreamInput {
+    align-items: center;
+}
+.dreamButton {
+    width: 100px;
+}
+
+.sliderIcon {
+    color: var(--tgui--secondary_hint_color);
+}

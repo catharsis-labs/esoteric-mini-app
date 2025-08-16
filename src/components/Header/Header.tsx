@@ -21,6 +21,7 @@ export function Header({ balance, name, avatarUrl }: HeaderProps) {
           fontSize: 16,
           fontWeight: 500,
           color: 'var(--tg-theme-text-color)',
+          paddingLeft: '16px',
         }}
       >
         {balance}
@@ -30,7 +31,7 @@ export function Header({ balance, name, avatarUrl }: HeaderProps) {
         <span
           style={{
             marginRight: 8,
-            fontSize: 14,
+            fontSize: 16,
             color: 'var(--tg-theme-text-color)',
           }}
         >
