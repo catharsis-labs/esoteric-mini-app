@@ -9,8 +9,9 @@ interface DreamInterpreterProgressProps {
 export const ProgressBar: FC<DreamInterpreterProgressProps> = ({ progress }) => {
     return (
         <Page back={false}>
-            <h2>Анализируем ваш сон...</h2>
-            <Progress value={progress} />
+            <div>
+                <Progress value={progress} />
+            </div>
         </Page>
     );
 };

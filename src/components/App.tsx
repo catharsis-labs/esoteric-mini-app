@@ -11,8 +11,8 @@ export function App() {
   const isDark = useSignal(isMiniAppDark);
 
   // Подстроить под реальную высоту ваших FixedLayout
-  const HEADER_HEIGHT = 72;
-  const FOOTER_HEIGHT = 64;
+  const HEADER_HEIGHT = 100;
+  const FOOTER_HEIGHT = 100;
 
   return (
     <AppRoot
