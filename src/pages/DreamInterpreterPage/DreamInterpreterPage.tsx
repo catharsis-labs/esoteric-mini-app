@@ -36,9 +36,7 @@ export const DreamInterpreterPage: FC = () => {
 
     return (
         <Page back={false}>
-            {!loading && !result && (
-                <DreamInterpreterInput onSubmit={handleSubmit} />
-            )}
+            {!loading && !result && (<DreamInterpreterInput onSubmit={handleSubmit} />)}
             {loading && <ProgressBar progress={progress} />}
             {!loading && result && <DreamInterpreterResult result={result} />}
         </Page>

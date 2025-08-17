@@ -3,23 +3,26 @@ import type { FC } from 'react';
 
 import { Link } from '@/components/Link/Link.tsx';
 import { Page } from '@/components/Page.tsx';
+import styles from './HomePage.module.css';
 
 export const HomePage: FC = () => {
   return (
     <Page back={false}>
-      <List>
-        <Section>
-          <Link to="/tarot-spreads">
-            <Cell>Tarot spreads</Cell>
-          </Link>
-          <Link to="/dream-interpreter">
-            <Cell>Dream interpreter</Cell>
-          </Link>
-          <Link to="/natal-chart">
-            <Cell>Natal chart</Cell>
-          </Link>
-        </Section>
-      </List>
+      <div className={styles.listContainer}>
+        <List className={styles.list}>
+          <Section>
+            <Link to="/tarot-spreads">
+              <Cell>Tarot spreads</Cell>
+            </Link>
+            <Link to="/dream-interpreter">
+              <Cell>Dream interpreter</Cell>
+            </Link>
+            <Link to="/natal-chart">
+              <Cell>Natal chart</Cell>
+            </Link>
+          </Section>
+        </List>
+      </div>
     </Page>
   );
 };

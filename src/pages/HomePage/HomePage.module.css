@@ -1,0 +1,20 @@
+.listContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Вертикальное центрирование */
+    min-height: 100vh; /* Высота на весь экран для портретного режима */
+    padding: 16px; /* Отступы для удобства */
+    box-sizing: border-box;
+}
+
+.list {
+    width: 100%;
+    max-width: 400px; /* Ограничение ширины для удобства чтения */
+}
+
+/* Медиа-запрос для портретного режима на мобильных устройствах */
+@media (orientation: portrait) and (max-width: 600px) {
+    .list {
+        max-width: 90%; /* Адаптивная ширина для маленьких экранов */
+    }
+}

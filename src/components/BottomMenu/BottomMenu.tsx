@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Tabbar } from '@telegram-apps/telegram-ui';
+import './BottomMenu.css';
+
 
 const tabs = [
   { id: 'home', text: '🏠 Главная', path: '/' },
@@ -20,9 +22,9 @@ export function BottomMenu() {
   };
 
   return (
-    <Tabbar>
+    <Tabbar className={'big-tab'}>
       {tabs.map(({ id, text, path }) => (
-        <Tabbar.Item
+        <Tabbar.Item className={'big-tab-button'}
           key={id}
           text={text}
           selected={id === currentTab}
