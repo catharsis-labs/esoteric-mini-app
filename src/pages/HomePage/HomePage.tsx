@@ -3,13 +3,13 @@ import type { FC } from 'react';
 
 import { Link } from '@/components/Link/Link.tsx';
 import { Page } from '@/components/Page.tsx';
-import styles from './HomePage.module.css';
+import homeStyles from './HomePage.module.css';
 
 export const HomePage: FC = () => {
   return (
     <Page back={false}>
-      <div className={styles.listContainer}>
-        <List className={styles.list}>
+      <div className={homeStyles.listContainer}>
+        <List className={homeStyles.list}>
           <Section>
             <Link to="/tarot-spreads">
               <Cell>Tarot spreads</Cell>

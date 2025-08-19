@@ -1,8 +1,8 @@
 .listContainer {
     display: flex;
     justify-content: center;
-    align-items: center; /* Вертикальное центрирование */
-    min-height: 100vh; /* Высота на весь экран для портретного режима */
+    align-items: end; /* Вертикальное центрирование */
+    min-height: 60vh; /* Высота на весь экран для портретного режима */
     padding: 16px; /* Отступы для удобства */
     box-sizing: border-box;
 }

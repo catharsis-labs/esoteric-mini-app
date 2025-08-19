@@ -1,10 +1,10 @@
-.big-tab {
+.tab {
     padding: 3dvh;
 }
 
 /* Надо как-то еще текст увеличить или иконки сделать, а то этот текст маленький
    я перепробовал варианты, но не получается. Код из библы:
    https://github.com/Telegram-Mini-Apps/TelegramUI/blob/main/src/components/Layout/Tabbar/components/TabbarItem/TabbarItem.module.css */
-.big-tab-button {
+.tabButton {
     top: -2.0dvh;
 }

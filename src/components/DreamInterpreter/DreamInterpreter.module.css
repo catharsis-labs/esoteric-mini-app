@@ -1,0 +1,65 @@
+.dreamInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 60vh;
+    padding: 20px;
+    gap: 12px;
+}
+
+.dreamButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 5vh;
+    padding: 0 20px;
+}
+
+.dreamTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 2vh;
+    padding: 16px;
+    gap: 16px;
+}
+
+.dreamOutput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    gap: 12px;
+
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.dream-interpretation h2 {
+    color: #4a4a4a;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 5px;
+    margin-top: 25px;
+}
+.dream-interpretation p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+.dream-interpretation .highlight {
+    font-weight: bold;
+}
+.dream-interpretation .quote {
+    font-style: italic;
+    padding-left: 15px;
+    border-left: 3px solid #e0e0e0;
+}
+
+@media (orientation: portrait) and (max-width: 400px) {
+    .dreamOutput {
+        max-width: 90%; /* Адаптивная ширина для маленьких экранов */
+    }
+}
