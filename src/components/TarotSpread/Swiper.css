@@ -1,0 +1,84 @@
+#app {
+    height: 100%;
+}
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    font-family:
+            Helvetica Neue,
+            Helvetica,
+            Arial,
+            sans-serif;
+    font-size: 14px;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fff;
+    font-family:
+            Helvetica Neue,
+            Helvetica,
+            Arial,
+            sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper {
+    width: 192px;
+    height: 256px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Внутренняя карточка — мы анимируем её */
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; height: 100%;
+    border-radius: 18px;
+    font-size: 22px; font-weight: bold; color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,.2);
+
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: opacity .35s ease, transform .35s ease;
+    will-change: opacity, transform;
+}
+
+/* Состояние удаления */
+.card--removing {
+    opacity: 0;
+    transform: translateY(-24px) scale(.95);
+    pointer-events: none;
+}
