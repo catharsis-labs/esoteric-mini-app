@@ -47,7 +47,6 @@ body {
 .swiper {
     width: 192px;
     height: 256px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .swiper-slide {
@@ -68,7 +67,7 @@ body {
     width: 100%; height: 100%;
     border-radius: 18px;
     font-size: 22px; font-weight: bold; color: #fff;
-    box-shadow: 0 4px 12px rgba(0,0,0,.2);
+    box-shadow: 0 4px 8px rgba(0,0,0,.2);
 
     opacity: 1;
     transform: translateY(0) scale(1);
